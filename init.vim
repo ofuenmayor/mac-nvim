@@ -196,6 +196,7 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'L3MON4D3/LuaSnip'
 call plug#end()
 
 lua require("omfest")
