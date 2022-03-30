@@ -1,4 +1,6 @@
 require("omfest.lsp")
+require("telescope").load_extension("dap")
+require("omfest.node")
 
 P = function(v)
 	print(vim.inspect(v))

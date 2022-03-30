@@ -45,6 +45,7 @@ nmap <Leader>nt :NERDTreeFind<CR>
 " Atajos de teclado
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nnoremap <silent> <leader>hn :nohlsearch<CR>
 nmap <Leader>wq :wq<CR>
 nmap <Leader>bn :bn<CR>
 nmap <Leader>be :bdelete<CR>
@@ -149,7 +150,7 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 " lightline
 " Plug 'itchyny/lightline.vim'
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 " vim inspector to nodejs 
 Plug 'eliba2/vim-node-inspect'
 " Tabs
@@ -197,6 +198,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'L3MON4D3/LuaSnip'
+
+"Debugger
+" Plug 'mfussenegger/nvim-dap" '
+" Plug 'rcarriga/nvim-dap-ui'
+" Plug 'theHamsta/nvim-dap-virtual-text'
+" Plug 'nvim-telescope/telescope-dap.nvim'
+" Plug 'Pocco81/DAPInstall.nvim'
 call plug#end()
 
 lua require("omfest")
@@ -255,9 +263,9 @@ nnoremap <leader>u :UndotreeShow<CR>
 " Themes configs
 "=========================
 set background=dark
-" colorscheme gruvbox
-colorscheme one 
-let g:airline_theme = "one"
+colorscheme gruvbox
+"colorscheme one 
+let g:airline_theme = "murmur"
 " let g:gruvbox_contrast_dark = "hard"
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
