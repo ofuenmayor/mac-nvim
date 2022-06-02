@@ -551,8 +551,8 @@ nnoremap <Leader>h5 :lua require("harpoon.ui").nav_file(5)<CR>
 nnoremap <Leader>h2 :lua require("harpoon.ui").nav_file(2)<CR>
 nnoremap <Leader>h3 :lua require("harpoon.ui").nav_file(3)<CR>
 nnoremap <Leader>h4 :lua require("harpoon.ui").nav_file(4)<CR>
-nnoremap <Leader>hc :lua require("harpoon.ui").nav_next()
-nnoremap <Leader>hd :lua require("harpoon.ui").nav_prev()
+nnoremap <Leader>hc :lua require("harpoon.ui").nav_next()<CR>
+nnoremap <Leader>hd :lua require("harpoon.ui").nav_prev()<CR>
 
 nnoremap <Leader>t0 <c-a>q 0<CR>
 nnoremap <Leader>t1 :lua require("harpoon.tmux").gotoTerminal(1)
