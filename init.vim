@@ -25,6 +25,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set noswapfile
 set nobackup
+set scrolloff=27
 set incsearch
 set undodir=~/.vim/undodir
 set undofile
