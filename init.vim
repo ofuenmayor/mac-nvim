@@ -13,6 +13,16 @@ set smartindent
 set termguicolors    
 let ayucolor="dark" 
 colorscheme ayu
+set wildmode=longest,list,full
+set wildmenu
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+
 "===================================
 " Plugin manager 
 "===================================
@@ -35,6 +45,9 @@ nnoremap <C-k> :cprev<CR>
 vnoremap <leader>p "_dP 
 vnoremap <leader>y "+y 
 nnoremap <leader>Y gg"+yG
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
