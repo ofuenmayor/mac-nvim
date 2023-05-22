@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+session=$(find ~/repos/workstation/core-tools ~/repos ~/rper -mindepth 1 -maxdepth 1 -type d | fzf)
+session_name=$(basename "$session" | tr . _ | tr ' ' _)
+
+if ! tmux has-session -t "$session_name" 2> /dev/null; then 
+	tmux new-session -s "$session_name" -n 'shell' -c "$session" -d
+
+
+	window=1
+	tmux new-window -t $session_name:$window -d -n 'logs' -c "$session"
+	# tmux send-keys -t $session_name:$window 'dcc logs -f ${session_name}'
+
+	window=2 
+	tmux new-window -t $session_name:$window -d -n 'nvim' -c "$session"
+	tmux send-keys -t $session_name:$window 'v .'
+
+	window=3 
+	tmux new-window -t $session_name:$window -d -n 'test' -c "$session"
+fi
+
+tmux switch-client -t "$session_name" 
+
+# tmux attach-session -d -t "$session_name"
+# tmux select-window -t 'nvim'
